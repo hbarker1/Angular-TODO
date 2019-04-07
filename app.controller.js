@@ -31,13 +31,16 @@ function TodoController ($scope) {
                 } else {
                     $scope.errortext = "The item is already in your shopping list.";
                 }
-            }
-            $scope.removeItem = function (x) {
+           
                 $scope.errortext = "";    
-                $scope.products.splice(x, 1);
-            }
+                $scope.todos.splice(listItem, 1, {
+                    text: addTask,
+                    completed: completed
+                });
+            
         });
-}
+    }    
+
 angular
   .module("todoApp")
   .controller("TodoController", TodoController);
