@@ -7,6 +7,7 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="app.module.js"></script>
     <script src="app.controller.js"></script>   
@@ -29,16 +30,16 @@
       </li>
     </ol>
     
-    <form data-ng-submit="save()">
+    <form data-ng-submit="enter()">
       <input type="text" data-ng-model="addTask" placeholder="Add Your To Do">
       <input type="hidden" data-ng-model="completed" value="">
-      <input type="hidden" data-ng-model="index" value="">
+      <input type="hidden" data-ng-model="listItem" value="">
       <input type="submit" value="Add">
     </form>
   
     
     
-    </section>>
+    </section>
 
 
     <!-- ng-click on button complete -->
