@@ -1,20 +1,84 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="App">
+<html ng-app="App">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title> My AngularJS App </title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.controller.js"></script>   
 </head>
 <body>
+    <section ng-controller="TodoController">
+      <h1>ToDo List</h1>
+      <p>A place to store the things you have to do!</p>
+    
+      <input type="search" data-ng-model="search.text" placeholder="Filter Your To Dos">
+          </section>>
 
-  <section ng-controller="MyCtrl">
-    <h1>Build beautiful things</h1>
-  </section>
 
-  <script src="https://code.angularjs.org/1.7.8/angular.js"></script>
-  <script src="app.module.js"></script>
-  <script src="app.controller.js"></script>
+    <!-- ng-click on button complete -->
+    <!-- //ng-submit ="" addToDo(data) - for button -->
+
+  
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+<!-- NOTES
+**controller would have the DemoController function to count
+const demoController = this;
+demoController.number = 5;
+
+
+<div ng-controller="DemoController as $badger">
+  <p>{{badger.name}}</p>
+  <div ng-repeat="idNumber in badger.numbers">
+    <button ng-click="badger.add(idNumber)"> Count + {{idNumber}}</button>
+  </div>
+
+
+</div>
+
+var badger = New DemoController ();
+scoping within eachother 
+
+ng = angular functionality
+
+
+angular
+.module("App")
+.controller("DemoController", DemoController)
+**calling angular which creates this controller
+
+
+form
+ng-sumbit ="ctr"
+ng-style= "{color:color}"
+
+
+
+
+
+vm.items = [
+{ name: "First", selected: true}
+{ name: "Second", selected: false}
+];
+
+vm.toggleSelect = function(item) {
+  item.selected =!item.selected
+};
+
+
+
+-->
