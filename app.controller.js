@@ -20,9 +20,11 @@ function TodoController ($scope) {
         ];
     
         $scope.save (() => {
-            $scope.products = ["Milk", "Bread", "Cheese"];
-            $scope.addItem = function () {
-                $scope.errortext = "";
+            let addTask = $scope.addTask;
+            let completed = $scope.completed;
+            let listItem = $scope.listItem;
+            let removeItem = $scope.removeItem;
+            
                 if (!$scope.addMe) {return;}
                 if ($scope.products.indexOf($scope.addMe) == -1) {
                     $scope.products.push($scope.addMe);
