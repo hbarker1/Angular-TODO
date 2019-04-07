@@ -17,7 +17,24 @@
       <p>A place to store the things you have to do!</p>
     
       <input type="search" data-ng-model="search.text" placeholder="Filter Your To Dos">
-          </section>>
+          
+      <ol>
+      <li data-ng-animate="'animate'" data-ng-repeat="task in todos | filter:search:strict">
+        <label data-ng-click="task.completed = !task.completed">
+          <span ng-class="{ completed: task.completed }"><a class="complete" ng-if="!task.completed" href="#" >Complete</a>
+            {{ task.text }} </span>
+            <!-- bonus: need to fix edit so it does not complete to do -->
+            <a class="edit" href="javascript:;" data-ng-click="edit(task, $index)">Edit</a>
+            <button class="remove-btn" ng-click="removeTask()">X</button>
+  
+        </label>
+      </li>
+    </ol>
+    
+    
+    
+    
+    </section>>
 
 
     <!-- ng-click on button complete -->
