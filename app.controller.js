@@ -22,6 +22,6 @@ function TodoController ($scope) {
 //  testing testing
 }
 angular
-  .module("App")
+  .module("todoApp")
   .controller("TodoController", TodoController);
   
