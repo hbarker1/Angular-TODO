@@ -19,7 +19,7 @@
       <input type="search" data-ng-model="search.text" placeholder="Filter Your To Dos">
           
       <ol>
-      <li data-ng-animate="'animate'" data-ng-repeat="task in todos | filter:search:strict">
+      <li data-ng-repeat="task in todos | filter:search:strict">
         <label data-ng-click="task.completed = !task.completed">
           <span ng-class="{ completed: task.completed }"><a class="complete" ng-if="!task.completed" href="#" >Complete</a>
             {{ task.text }} </span>
@@ -29,7 +29,13 @@
       </li>
     </ol>
     
-    
+    <form data-ng-submit="save()">
+      <input type="text" data-ng-model="addTask" placeholder="Add Your To Do">
+      <input type="hidden" data-ng-model="completed" value="">
+      <input type="hidden" data-ng-model="index" value="">
+      <input type="submit" value="Add">
+    </form>
+  
     
     
     </section>>

@@ -3,7 +3,7 @@ function TodoController ($scope) {
     $scope.todos = [
         {
             text:'Walk the Dog',
-            completed: true
+            completed: false
           },
           {
             text:'Go to the store',
