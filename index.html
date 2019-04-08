@@ -22,9 +22,9 @@
       <ol>
       <li data-ng-repeat="task in todos | filter:search:strict">
         <label data-ng-click="task.completed = !task.completed">
-          <span ng-class="{ completed: task.completed }"><a class="complete" ng-if="!task.completed" href="#" >Complete</a>
+          <span ng-class="{ completed: task.completed }"><a class="complete" ng-if="!task.completed">Complete</a>
             {{ task.text }} </span>
-            <button class="remove-btn" ng-click="removeTask()">X</button>
+            <button class="remove-btn" ng-click="removeItem()">X</button>
   
         </label>
       </li>
