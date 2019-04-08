@@ -17,7 +17,7 @@
       <h1>ToDo List</h1>
       <p>A place to store the things you have to do!</p>
     
-      <input type="search" data-ng-model="search.text" placeholder="Filter Your To Dos">
+      <input type="search" class="search" data-ng-model="search.text" placeholder="Filter Your To Dos">
           
       <ol>
       <li data-ng-repeat="task in todos | filter:search:strict">
@@ -31,10 +31,10 @@
     </ol>
     
     <form data-ng-submit="enter()">
-      <input type="text" data-ng-model="addTask" placeholder="Add Your To Do">
+      <input type="text" class="text" data-ng-model="addTask" placeholder="Add Your To Do">
       <input type="hidden" data-ng-model="completed" value="">
       <input type="hidden" data-ng-model="listItem" value="">
-      <input type="submit" value="Add">
+      <input type="submit" class="submit" value="Add">
     </form>
   
     
