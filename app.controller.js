@@ -49,7 +49,7 @@ function TodoController ($scope) {
       });
 
     // x button to remove list item
-      $scope.removeItem = (() => {
+      $scope.removeTask = (() => {
         let lastTask = $scope.todos;
         $scope.todos = [];
         angular.forEach(lastTask, function(x) {
